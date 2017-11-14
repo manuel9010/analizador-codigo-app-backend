@@ -23,7 +23,6 @@ public class RestApiController {
 	@Autowired
 	AnalizadorCodigoService analizadorCodigoService;
 
-
 	@RequestMapping(value = "/generar-codigo/", method = RequestMethod.POST)
 	public ResponseEntity<?> generarCodigo(@RequestBody GenerarCodigoDTO data) {
 		GenerarCodigoDTO response = new GenerarCodigoDTO();
@@ -37,6 +36,5 @@ public class RestApiController {
 		response.setCodigo(codigoHtml);
 		return new ResponseEntity<GenerarCodigoDTO>(response, HttpStatus.OK);
 	}
-
 
 }
